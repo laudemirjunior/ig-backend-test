@@ -52,6 +52,7 @@
   <li> The login must return a token to be used in the other routes.  </li>
   <li> Access to application routes (with the exception of user registration), must be done by passing the token obtained at login via Auth - Bearer Token in the request.  </li>
   <li> The api must be REST.  </li>
+  <li> TDD. Add the command to run the tests in package.json.</li>
   <li> Database (Postgres / MySQL).  </li>
   <li> Optional - SOLID can be applied in the application.  </li>
   <li> App and database running on Docker.  </li>
