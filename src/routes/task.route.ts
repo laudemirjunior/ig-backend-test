@@ -2,8 +2,8 @@ import { Router } from "express";
 import {
   createTaskController,
   deleteTaskController,
-  retrieveTaskByDoneController,
   retrieveTaskByIdController,
+  retrieveTaskByStatusController,
   retrieveTasksController,
   updateTaskController,
 } from "../controllers";
@@ -47,9 +47,9 @@ taskRouter.get(
 );
 
 taskRouter.get(
-  "/task/status/:done",
+  "/task/status/:status",
   validateTokenMiddleware,
-  retrieveTaskByDoneController
+  retrieveTaskByStatusController
 );
 
 export { taskRouter };

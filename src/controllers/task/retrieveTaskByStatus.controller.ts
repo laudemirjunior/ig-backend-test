@@ -1,16 +1,16 @@
 import { Request, Response } from "express";
-import { retrieveTaskByDoneService } from "../../services";
+import { retrieveTaskByStatusService } from "../../services";
 import { handleError } from "../../utils";
 
-export const retrieveTaskByDoneController = async (
+export const retrieveTaskByStatusController = async (
   req: Request,
   res: Response
 ) => {
   const { email } = req;
-  const done = Boolean(req.params);
+  const { status } = req.params;
 
   try {
-    const tasks = await retrieveTaskByDoneService(email, done);
+    const tasks = await retrieveTaskByStatusService(email, status);
 
     return res.status(200).json(tasks);
   } catch (error) {

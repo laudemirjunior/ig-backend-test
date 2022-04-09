@@ -1,7 +1,7 @@
 import { createTaskController } from "./task/createTask.controller";
 import { deleteTaskController } from "./task/deleteTask.controller";
-import { retrieveTaskByDoneController } from "./task/retrieveTaskByDone.controller";
 import { retrieveTaskByIdController } from "./task/retrieveTaskById.controller";
+import { retrieveTaskByStatusController } from "./task/retrieveTaskByStatus.controller";
 import { retrieveTasksController } from "./task/retrieveTasks.controller";
 import { updateTaskController } from "./task/updateTask.controoller";
 import { loginUserController } from "./user/loginUser.controller";
@@ -16,5 +16,5 @@ export {
   deleteTaskController,
   retrieveTasksController,
   retrieveTaskByIdController,
-  retrieveTaskByDoneController,
+  retrieveTaskByStatusController,
 };

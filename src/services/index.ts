@@ -1,7 +1,7 @@
 import { createTaskService } from "./task/createTask.service";
 import { deleteTaskService } from "./task/deleteTask.service";
-import { retrieveTaskByDoneService } from "./task/retrieveTaskByDone.service";
 import { retrieveTaskByIdService } from "./task/retrieveTaskById.service";
+import { retrieveTaskByStatusService } from "./task/retrieveTaskByStatus.service";
 import { retrieveTasksService } from "./task/retrieveTasks.service";
 import { updateTaskService } from "./task/updateTasks.service";
 import { loginUserService } from "./user/loginUser.service";
@@ -16,6 +16,6 @@ export {
   loginUserService,
   updateUserService,
   retrieveTaskByIdService,
-  retrieveTaskByDoneService,
+  retrieveTaskByStatusService,
   retrieveTasksService,
 };

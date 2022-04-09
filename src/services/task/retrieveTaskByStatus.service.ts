@@ -1,14 +1,14 @@
 import { UserRepository } from "../../repositories";
 import { ErrorHandler } from "../../utils";
 
-export const retrieveTaskByDoneService = async (
+export const retrieveTaskByStatusService = async (
   email: string,
-  done: boolean
+  status: string
 ) => {
   try {
-    const user: any = await new UserRepository().findUser(email);
+    const user = await new UserRepository().findUser(email);
 
-    const tasks = user.tasks.filter((item: any) => item.done !== done);
+    const tasks = user.tasks.filter((item) => item.done.toString() === status);
 
     return tasks;
   } catch (error) {

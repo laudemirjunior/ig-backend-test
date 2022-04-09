@@ -19,7 +19,7 @@ describe("Create Task", () => {
   });
   it("Should be able to login", async () => {
     const response = await request(app).post("/login").send(userLogin);
-    token = JSON.parse(response.text);
+    token = response.text;
     expect(response.status).toBe(200);
   });
   it("should be able to create task", async () => {
