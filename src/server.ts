@@ -1,17 +1,15 @@
-import express from "express";
+import "reflect-metadata";
+import { createConnection } from "typeorm";
+import { app } from "./app";
+import dbOptions from "./database/ormconfig";
 
-const app = express();
+const PORT = process.env.PORT ?? "3000";
 
-app.use(express.json());
-
-app.get("/", (request, response) => {
-  return response.json({ message: "Hello World" });
-});
-
-app.post("/courses", (request, response) => {
-  const { name } = request.body;
-
-  return response.json({ name });
-});
-
-app.listen(3333, () => console.log("Server is running!"));
+createConnection(dbOptions)
+  .then(() => {
+    console.log("Database connected");
+    app.listen(PORT, () => {
+      console.log(`App running on port ${PORT}`);
+    });
+  })
+  .catch((error: any) => console.log(error));
