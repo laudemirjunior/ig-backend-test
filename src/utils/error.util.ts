@@ -2,15 +2,19 @@ import { Response } from "express";
 
 class ErrorHandler {
   public status: number;
-  public message: any;
+  public message: string;
 
-  constructor(status: number, message: any) {
+  constructor(status: number, message: string) {
     this.status = status;
     this.message = message;
   }
 }
+interface IError {
+  status: number;
+  message: string;
+}
 
-const handleError = async (err: any, res: Response) => {
+const handleError = async (err: IError, res: Response) => {
   if (err instanceof ErrorHandler) {
     const { status, message } = err;
 

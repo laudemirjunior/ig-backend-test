@@ -1,8 +1,8 @@
-import { NextFunction, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { ITask, TaskRepository } from "../repositories";
 
 export const validateOwnerMiddleware = async (
-  req: any,
+  req: Request,
   res: Response,
   next: NextFunction
 ) => {

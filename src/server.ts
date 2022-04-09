@@ -12,4 +12,4 @@ createConnection(dbOptions)
       console.log(`App running on port ${PORT}`);
     });
   })
-  .catch((error: any) => console.log(error));
+  .catch((error) => console.log(error));

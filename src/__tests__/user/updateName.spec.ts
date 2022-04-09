@@ -29,6 +29,6 @@ describe("Update user", () => {
       .send({
         name: "Testando",
       });
-    expect(response.status).toBe(204);
+    expect(response.status).toBe(200);
   });
 });
