@@ -23,3 +23,8 @@ services:
       - .:/usr/src/app
     working_dir: /usr/src/app
     command: yarn dev
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
