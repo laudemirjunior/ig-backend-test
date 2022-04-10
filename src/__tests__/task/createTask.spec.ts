@@ -1,7 +1,7 @@
 import request from "supertest";
 import { createConnection } from "typeorm";
 import { app } from "../../app";
-import dbOptions from "../../database/ormconfig";
+import dbOptions from "..//ormconfig";
 import { task, user } from "../mock";
 import { userLogin } from "./../mock";
 let token: any = {};
@@ -19,7 +19,7 @@ describe("Create Task", () => {
   });
   it("Should be able to login", async () => {
     const response = await request(app).post("/login").send(userLogin);
-    token = response.text;
+    token = JSON.parse(response.text);
     expect(response.status).toBe(200);
   });
   it("should be able to create task", async () => {

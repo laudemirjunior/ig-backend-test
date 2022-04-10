@@ -1,7 +1,7 @@
 import request from "supertest";
 import { createConnection } from "typeorm";
 import { app } from "../../app";
-import dbOptions from "../../database/ormconfig";
+import dbOptions from "..//ormconfig";
 import { user, userLogin } from "../mock";
 let token = {} as any;
 
