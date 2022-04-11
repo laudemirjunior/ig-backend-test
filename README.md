@@ -1,3 +1,15 @@
+# Iniciando o projeto
+
+```
+$ yarn
+```
+
+or
+
+```
+$ npm install
+```
+
 # Iniciando o projeto com Docker Compose
 
 ```
