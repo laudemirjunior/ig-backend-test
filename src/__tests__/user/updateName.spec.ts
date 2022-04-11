@@ -1,8 +1,8 @@
 import request from "supertest";
 import { createConnection } from "typeorm";
 import { app } from "../../app";
+import dbOptions from "../../database/ormconfig";
 import { user, userLogin } from "../mock";
-import dbOptions from "../ormconfig";
 let token = {} as any;
 
 beforeAll(async () => {

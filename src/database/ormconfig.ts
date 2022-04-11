@@ -7,7 +7,6 @@ dotenv.config();
 export default {
   type: "postgres",
   host: "ig-postgres",
-  // host: "localhost",
   port: 5432,
   username: "postgres",
   password: process.env.POSTGRES_PASSWORD,

@@ -1,0 +1,5 @@
+FROM postgres:alpine
+
+ENV POSTGRES_DB: ig
+
+ENV POSTGRES_PASSWORD: 1234
