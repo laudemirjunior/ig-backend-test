@@ -4,19 +4,19 @@
 $ yarn
 ```
 
-or
+ou
 
 ```
 $ npm install
 ```
 
-# Iniciando o projeto com Docker Compose
+# Iniciando o Docker Compose
 
 ```
 $ sudo docker-compose up
 ```
 
-# Iniciando os testes
+# Rodando os testes
 
 Abra outro terminal para que o docker-compose continue rodando.
 
