@@ -15,7 +15,7 @@ export const createTaskService = async (body: ITask, email: string) => {
 
     const newTask: ITask = await new TaskRepository().saveTask(body);
 
-    user.tasks = [...user.tasks, newTask];
+    user.tasks.push(newTask);
 
     await new UserRepository().saveUser(user);
 
