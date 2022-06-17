@@ -1,0 +1,362 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-04-09T18:40:08.076Z",
+  "__export_source": "insomnia.desktop.app:v2022.2.0",
+  "resources": [
+    {
+      "_id": "req_d78f83bf1fee46f4a53d9980c181dcdf",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649528966878,
+      "created": 1648843496459,
+      "url": "http://localhost:3000/register",
+      "name": "register user",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Fulando\",\n\t\"lastName\": \"De Tal\",\n\t\"email\": \"teste@teste.com\",\n\t\"cpf\": \"01234567890\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_0734100e6f0e4458ba9bc12cabae5f0e"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1648582533356.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "parentId": null,
+      "modified": 1647871497702,
+      "created": 1647871497702,
+      "name": "New Document",
+      "description": "",
+      "scope": "design",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_5725a59a56594b3a9f7dc5abb4385117",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649529552950,
+      "created": 1649252037346,
+      "url": "http://localhost:3000/login",
+      "name": "login user",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"teste@teste.com\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_0734100e6f0e4458ba9bc12cabae5f0e"
+        }
+      ],
+      "authentication": { "type": "bearer" },
+      "metaSortKey": -1648582533306.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_21a8081fca234ef0beadd408b0ded6e4",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649529552494,
+      "created": 1649252067774,
+      "url": "http://localhost:3000/update",
+      "name": "update user",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Testando\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533294,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_70c5b045cf4043a6af713be3e035239e",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649529569799,
+      "created": 1649265285100,
+      "url": "http://localhost:3000/task",
+      "name": "create task",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Teste\",\n  \"done\": false,\n  \"date\": \"2022/02/12\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533281.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f25bae3437e841cca614e28987e4450a",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649529584155,
+      "created": 1649253748313,
+      "url": "http://localhost:3000/task/{% response 'body', 'req_70c5b045cf4043a6af713be3e035239e', 'b64::JC5pZA==::46b', 'never', 60 %}",
+      "name": "update task",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Testando\",\n  \"done\": true,\n\t\"date\": \"2022/02/09\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533206.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e78b4ac0048345d3acf9a52fbe046ab6",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649528996736,
+      "created": 1649278782137,
+      "url": "http://localhost:3000/task/{% response 'body', 'req_70c5b045cf4043a6af713be3e035239e', 'b64::JC5pZA==::46b', 'never', 60 %}",
+      "name": "delete task",
+      "description": "",
+      "method": "DELETE",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533181.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_13bb7a9642694f2a98aef03cd80fb8ae",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649528986082,
+      "created": 1649267894926,
+      "url": "http://localhost:3000/tasks",
+      "name": "retrieve tasks",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533156.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_66e59274c928406ea01b8c496e003944",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649528999899,
+      "created": 1649271158923,
+      "url": "http://localhost:3000/task/id/{% response 'body', 'req_70c5b045cf4043a6af713be3e035239e', 'b64::JC5pZA==::46b', 'never', 60 %}",
+      "name": "retrieve task by id",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533106.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ecc95d2cbe354300842486667aca4aeb",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649529551462,
+      "created": 1649273742095,
+      "url": "http://localhost:3000/task/status/false",
+      "name": "retrieve task by status",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_58af7e0e55024b6a8fadea0223c909ca"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_5725a59a56594b3a9f7dc5abb4385117', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "prefix": "token"
+      },
+      "metaSortKey": -1648582533056.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_f7b4aef9c2cfb314dfb953bb25bb92d608b806a8",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1647871497720,
+      "created": 1647871497720,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1647871497720,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_f7b4aef9c2cfb314dfb953bb25bb92d608b806a8",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1647871497724,
+      "created": 1647871497724,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_87f78d4dc7c14639a4ca80defc981bae",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1649526025235,
+      "created": 1647871497715,
+      "fileName": "ig-backend-test",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "uts_95109ba408b04c289e07966d71b55dc4",
+      "parentId": "wrk_e7f698ef5fd14ac8b9ad4d0772762d42",
+      "modified": 1647871497730,
+      "created": 1647871497730,
+      "name": "Example Test Suite",
+      "_type": "unit_test_suite"
+    }
+  ]
+}
